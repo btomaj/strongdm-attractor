@@ -1888,7 +1888,7 @@ This section defines how to validate that an implementation of this spec is comp
 ### 11.11 Transforms and Extensibility
 
 - [ ] AST transforms can modify the Graph between parsing and validation
-- [ ] Transform interface: `transform(graph) -> graph`
+- [ ] Transform interface: `apply(graph) -> Graph`
 - [ ] Built-in variable expansion transform replaces `$goal` in prompts
 - [ ] Custom transforms can be registered and run in order
 - [ ] HTTP server mode (if implemented): POST /run starts pipeline, GET /status checks state, POST /answer submits human input
