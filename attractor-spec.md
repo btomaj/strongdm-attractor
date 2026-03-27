@@ -396,7 +396,7 @@ FUNCTION run(graph, context=new Context(), start_at=None):
 
         -- Step 7: Handle loop_restart
         IF next_edge has loop_restart=true:
-            RETURN run(graph, context, start_at=next_edge.target)
+            RETURN run(graph, context, start_at=next_edge.to_node)
 
         -- Step 8: Advance to next node
         current_node = graph.nodes[next_edge.to_node]
