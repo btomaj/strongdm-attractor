@@ -1832,7 +1832,7 @@ This section defines how to validate that an implementation of this spec is comp
 
 ### 11.5 Retry Logic
 
-- [ ] Nodes with `max_retries > 0` are retried on RETRY or FAIL outcomes
+- [ ] Nodes with `max_retries > 0` are retried on RETRY outcomes
 - [ ] Retry count is tracked per-node and respects the configured limit
 - [ ] Backoff between retries works (constant, linear, or exponential as configured)
 - [ ] Jitter is applied to backoff delays when configured
@@ -1909,7 +1909,7 @@ Run this validation matrix -- each cell must pass:
 | Validate: orphan node -> error                   | [ ] |
 | Execute a linear 3-node pipeline end-to-end      | [ ] |
 | Execute with conditional branching (success/fail paths) | [ ] |
-| Execute with retry on failure (max_retries=2)    | [ ] |
+| Execute with retry on RETRY outcomes (max_retries=2) | [ ] |
 | Goal gate blocks exit when unsatisfied            | [ ] |
 | Goal gate allows exit when all satisfied          | [ ] |
 | Wait.human presents choices and routes on selection | [ ] |
