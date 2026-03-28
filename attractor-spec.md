@@ -770,6 +770,7 @@ WaitForHumanHandler:
         -- 6. Record in context and return
         RETURN Outcome(
             status=SUCCESS,
+            preferred_label=selected.label
             suggested_next_ids=[selected.to],
             context_updates={
                 "human.gate.selected": selected.key,
